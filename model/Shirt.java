@@ -1,12 +1,14 @@
 package model;
 
-public class Shirt extends Product {
+public class Shirt extends Clothes {
     private String size;
 
     public Shirt(String name, double price, String size) {
         super(name, price);
         setSize(size);
     }
+
+    public String getSize() { return size; }
 
     public void setSize(String size) {
         if (size == null || size.isEmpty()) {

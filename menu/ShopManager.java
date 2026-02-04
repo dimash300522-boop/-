@@ -4,13 +4,13 @@ import model.*;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class MenuManager implements Menu {
+public class ShopManager implements Menu {
 
-    private ArrayList<Product> products;
+    private ArrayList<Clothes> clothess;
     private Scanner scanner;
 
-    public MenuManager() {
-        products = new ArrayList<>();
+    public ShopManager() {
+        clothess = new ArrayList<>();
         scanner = new Scanner(System.in);
     }
 
@@ -61,7 +61,7 @@ public class MenuManager implements Menu {
         System.out.print("Size: ");
         String size = scanner.nextLine();
 
-        products.add(new Shirt(name, price, size));
+        clothess.add(new Shirt(name, price, size));
         System.out.println("Shirt added!");
     }
 
@@ -75,19 +75,19 @@ public class MenuManager implements Menu {
         System.out.print("Length: ");
         int length = Integer.parseInt(scanner.nextLine());
 
-        products.add(new Pants(name, price, length));
+        clothess.add(new Pants(name, price, length));
         System.out.println("Pants added!");
     }
 
     private void viewProducts() {
-        for (Product p : products) {
-            p.displayInfo();
+        for (Clothes c : clothess) {
+            c.displayInfo();
         }
     }
 
     private void wearProducts() {
-        for (Product p : products) {
-            p.wear(); // POLYMORPHISM
+        for (Clothes c : clothess) {
+            c.wear(); // POLYMORPHISM
         }
     }
 }

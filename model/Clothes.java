@@ -1,13 +1,16 @@
 package model;
 
-public abstract class Product {
+public abstract class Clothes {
     protected String name;
     protected double price;
 
-    public Product(String name, double price) {
+    public Clothes(String name, double price) {
         setName(name);
         setPrice(price);
     }
+
+    public String getName() { return name; }
+    public double getPrice() { return price; }
 
     public void setName(String name) {
         if (name == null || name.trim().isEmpty()) {

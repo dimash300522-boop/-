@@ -23,13 +23,12 @@ public class TestConnection {
             System.out.println("FAILED to connect!");
             System.out.println("Error message: " + e.getMessage());
 
-            // Қателерді талдау:
             if (e.getMessage().contains("password authentication failed")) {
-                System.out.println("Кеңес: Пароль қате жазылған!");
+                System.out.println("Incorrect Password");
             } else if (e.getMessage().contains("does not exist")) {
-                System.out.println("Кеңес: База аты (shop) қате немесе құрылмаған!");
+                System.out.println("Tip: The database name (store) is incorrect or not created!");
             } else if (e.getMessage().contains("No suitable driver")) {
-                System.out.println("Кеңес: JDBC Driver (JAR файл) қосылмаған!");
+                System.out.println("Tip: JDBC Driver (JAR file) is not included!");
             }
             System.out.println("---------------------------------------");
         }

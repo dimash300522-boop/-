@@ -1,6 +1,6 @@
 package model;
 
-public class Pants extends Product {
+public class Pants extends Clothes {
     private int length;
 
     public Pants(String name, double price, int length) {
